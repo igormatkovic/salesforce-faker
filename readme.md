@@ -20,7 +20,7 @@ FakerFactory is inspired by [Laravel Model Factory](https://laravel.com/docs/5.6
 
 ## Installation
 
-<a href="https://githubsfdeploy.herokuapp.com?owner=igormatkovic&repo=salesforce-faker">
+<a href="https://goo.gl/Zb2d1x">
     <img alt="Deploy to Salesforce" src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
 
