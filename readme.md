@@ -1,6 +1,6 @@
-# Faker
+# Salesforce Faker
 
-Faker is a Native Salesforce library that generates fake data for you.
+Salesforce Faker is a native Salesforce library that generates fake data for you.
 
 Faker is inspired by PHP's [Faker](https://github.com/fzaninotto/Faker).  
 FakerFactory is inspired by [Laravel Model Factory](https://laravel.com/docs/5.6/seeding#using-model-factories).
