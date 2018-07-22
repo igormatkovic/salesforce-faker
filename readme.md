@@ -206,4 +206,4 @@ System.debug(contacts.size()); // 100
 
 ## License
 
-Salesforce Faker is released under the MIT Licence. See the bundled LICENSE file for details.
+Salesforce Faker is released under the GNU General Public License v3.0. See the bundled LICENSE file for details.
