@@ -5,17 +5,22 @@ class FakerPersonProviderTest {
         Faker faker = new Faker('US');
 
         Test.startTest();
-        System.assertNotEquals(null, faker.person.nameFormats);
-        System.assertNotEquals(null, faker.person.firstName);
+        System.assertNotEquals(null, faker.person.nameFormatsMale);
+        System.assertNotEquals(null, faker.person.nameFormatsFemale);
+        System.assertNotEquals(null, faker.person.firstNameFemale);
+        System.assertNotEquals(null, faker.person.firstNameMale);
         System.assertNotEquals(null, faker.person.lastName);
         System.assertNotEquals(null, faker.person.suffix);
         System.assertNotEquals(null, faker.person.gender);
-        System.assertNotEquals(null, faker.person.title);
+        System.assertNotEquals(null, faker.person.titleMale);
+        System.assertNotEquals(null, faker.person.titleFemale);
         System.assertNotEquals(null, faker.person.jobTitle);
-        System.assert(faker.person.mapValues.containsKey('firstName'));
+        System.assert(faker.person.mapValues.containsKey('firstNameMale'));
+        System.assert(faker.person.mapValues.containsKey('firstNameFemale'));
         System.assert(faker.person.mapValues.containsKey('lastName'));
         System.assert(faker.person.mapValues.containsKey('suffix'));
-        System.assert(faker.person.mapValues.containsKey('title'));
+        System.assert(faker.person.mapValues.containsKey('titleMale'));
+        System.assert(faker.person.mapValues.containsKey('titleFemale'));
         System.assert(faker.person.mapValues.containsKey('gender'));
         System.assert(faker.person.mapValues.containsKey('jobTitle'));
         Test.stopTest();
@@ -39,13 +44,12 @@ class FakerPersonProviderTest {
         String picture = faker.person.picture(200,200);
 
         System.assertNotEquals(null, name);
-        System.assert(faker.person.firstName.contains(firstName));
+        System.assert(faker.person.firstNameMale.contains(firstName) || faker.person.firstNameFemale.contains(firstName));
         System.assert(faker.person.lastName.contains(lastName));
         System.assert(faker.person.suffix.contains(suffix));
-        System.assert(faker.person.title.contains(title));
+        System.assert(faker.person.titleMale.contains(title) || faker.person.titleFemale.contains(title));
         System.assert(faker.person.gender.contains(gender));
         System.assert(faker.person.jobTitle.contains(jobTitle));
-
 
         System.assertEquals(11, ssn.length());
         System.assertEquals(14, phone.length());

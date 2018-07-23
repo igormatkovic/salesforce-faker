@@ -125,7 +125,8 @@ public virtual class FakerBase {
     };
 
     public String randomElement(List<String> elements) {
-        return elements[Math.mod(Math.abs(Crypto.getRandomInteger()),elements.size())];
+        Integer element = Math.mod(Math.abs(Crypto.getRandomInteger()),elements.size());
+        return elements[element];
     }
 
     public Integer randomElement(List<Integer> elements) {

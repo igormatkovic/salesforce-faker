@@ -3,26 +3,35 @@
  */
 
 public virtual class FakerPersonProvider extends FakerBase {
-    public List<String> nameFormats;
-    public List<String> firstName;
+    public List<String> nameFormatsMale;
+    public List<String> nameFormatsFemale;
+    public List<String> firstNameMale;
+    public List<String> firstNameFemale;
     public List<String> lastName;
     public List<String> suffix;
     public List<String> gender;
-    public List<String> title;
+    public List<String> titleMale;
+    public List<String> titleFemale;
     public List<String> jobTitle;
 
     public void init() {
         this.mapValues = new Map<String, List<String>>();
-        this.mapValues.put('firstName', this.firstName);
+        this.mapValues.put('firstNameMale', this.firstNameMale);
+        this.mapValues.put('firstNameFemale', this.firstNameFemale);
         this.mapValues.put('lastName', this.lastName);
         this.mapValues.put('jobTitle', this.jobTitle);
         this.mapValues.put('gender', this.gender);
         this.mapValues.put('suffix', this.suffix);
-        this.mapValues.put('title', this.title);
+        this.mapValues.put('titleMale', this.titleMale);
+        this.mapValues.put('titleFemale', this.titleFemale);
     }
 
     public String name() {
-        return this.generate(this.randomElement(this.nameFormats));
+        return this.name(this.gender());
+    }
+
+    public String name(String gender) {
+        return this.generate(this.randomElement(gender == 'female' ? this.nameFormatsFemale : this.nameFormatsMale ));
     }
 
     public String suffix() {
@@ -30,7 +39,11 @@ public virtual class FakerPersonProvider extends FakerBase {
     }
 
     public String firstName() {
-        return this.randomElement(this.firstName);
+        return this.firstName(this.gender());
+    }
+
+    public String firstName(String gender) {
+        return this.randomElement(gender == 'female' ? this.firstNameFemale : this.firstNameMale);
     }
 
     public String lastName() {
@@ -38,7 +51,11 @@ public virtual class FakerPersonProvider extends FakerBase {
     }
 
     public String title() {
-        return this.randomElement(this.title);
+        return this.title(this.gender());
+    }
+
+    public String title(String gender) {
+        return this.randomElement(gender == 'female' ? this.titleFemale : this.titleMale);
     }
 
     public String jobTitle() {
