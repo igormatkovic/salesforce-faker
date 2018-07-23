@@ -26,9 +26,9 @@ public class FakerInternetProvider extends FakerBase {
             '##', '#?', '?#'
     };
     public List<String> usernameFormats = new List<String>{
-            '{{lastName}}.{{firstName}}',
-            '{{firstName}}.{{lastName}}',
-            '{{firstName}}##',
+            '{{lastName}}.{{firstNameFemale}}',
+            '{{firstNameMale}}.{{lastName}}',
+            '{{firstNameFemale}}##',
             '?{{lastName}}',
             '?##{{lastName}}'
     };
@@ -101,27 +101,27 @@ public class FakerInternetProvider extends FakerBase {
     };
 
     public List<String> emailFormats = new List<String>{
-            '{{lastName}}.{{firstName}}@{{domainName}}',
-            '{{firstName}}.{{lastName}}@{{freeEmailDomain}}',
-            '{{firstName}}##@{{domainName}}',
+            '{{lastName}}.{{firstNameMale}}@{{domainName}}',
+            '{{firstNameFemale}}.{{lastName}}@{{freeEmailDomain}}',
+            '{{firstNameMale}}##@{{domainName}}',
             '?{{lastName}}@{{freeEmailDomain}}'
     };
     public List<String> safeEmailFormats = new List<String>{
-            '{{lastName}}.{{firstName}}@{{safeEmailDomain}}',
-            '{{firstName}}.{{lastName}}@{{safeEmailDomain}}',
-            '{{firstName}}##@{{safeEmailDomain}}',
+            '{{lastName}}.{{firstNameFemale}}@{{safeEmailDomain}}',
+            '{{firstNameFemale}}.{{lastName}}@{{safeEmailDomain}}',
+            '{{firstNameMale}}##@{{safeEmailDomain}}',
             '?{{lastName}}@{{safeEmailDomain}}'
     };
     public List<String> freeEmailFormats = new List<String>{
-            '{{lastName}}.{{firstName}}@{{freeEmailDomain}}',
-            '{{firstName}}.{{lastName}}@{{freeEmailDomain}}',
-            '{{firstName}}##@{{freeEmailDomain}}',
+            '{{lastName}}.{{firstNameFemale}}@{{freeEmailDomain}}',
+            '{{firstNameMale}}.{{lastName}}@{{freeEmailDomain}}',
+            '{{firstNameMale}}##@{{freeEmailDomain}}',
             '?{{lastName}}@{{freeEmailDomain}}'
     };
     public List<String> companyEmailFormats = new List<String>{
-            '{{lastName}}.{{firstName}}@???.{{tld}}',
-            '{{firstName}}.{{lastName}}@??#?.{{tld}}',
-            '{{firstName}}##@???.{{tld}}',
+            '{{lastName}}.{{firstNameMale}}@???.{{tld}}',
+            '{{firstNameFemale}}.{{lastName}}@??#?.{{tld}}',
+            '{{firstNameFemale}}##@???.{{tld}}',
             '?{{lastName}}@??#?.{{tld}}'
     };
     public List<String> webExtensions = new List<String>{
@@ -158,7 +158,8 @@ public class FakerInternetProvider extends FakerBase {
         this.mapValues.put('domainName', this.domainName);
         this.mapValues.put('domainWord', this.domainWord);
         this.mapValues.put('webExtension', this.webExtensions);
-        this.mapValues.put('firstName', this.person.firstName);
+        this.mapValues.put('firstNameFemale', this.person.firstNameFemale);
+        this.mapValues.put('firstNameMale', this.person.firstNameMale);
         this.mapValues.put('lastName', this.person.lastName);
     }
 
