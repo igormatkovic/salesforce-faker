@@ -105,9 +105,13 @@ Each of the generator properties (like `name`, `address`, and `realText`) are ca
 ### `FakerPersonProvider faker.person`
 
     String title()                                     // 'Ms.'
+    String title('male')                               // 'Mr.'
+    String title('female')                             // 'Miss.'
     String suffix                                      // 'Jr.'
-    String name()                                      // 'Dr. Zane Stroman'
+    String name('female')                              // 'Dr. Zane Stroman'
+    String name()                                      // 'Janet Einstein'
     String firstName()                                 // 'Maynard'
+    String firstName('female')                         // 'Betsy'
     String lastName()                                  // 'Zulauf'
     String jobTitle()                                  // 'Radiation Therapist'
     String ssn()                                       // '394-03-9503'
