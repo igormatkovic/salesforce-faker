@@ -77,9 +77,9 @@ Each of the generator properties (like `name`, `address`, and `realText`) are ca
 
     Boolean randomBoolean(85)                          // 85% of being true
 
-    String randomString(5)                             // 5 character length string [a-zA-Z] EUkfn
+    String randomString(5)                             // 5 character string [a-zA-Z] EUkfn
 
-    String randomCharacter(10)                         // 10 character length string [a-zA-Z] 8K#$(G)$J@
+    String randomCharacter(10)                         // 10 character string [a-zA-Z0-9]+simbols 8K#$(G)$J@
 
     Integer randomIntegerMaxDigits(6)                  // 395894
 
@@ -87,13 +87,13 @@ Each of the generator properties (like `name`, `address`, and `realText`) are ca
 
     Integer randomInteger(10)                          // 4090403 - max is 7 digits. SF doesn't like more
 
-    Integer randomIntegerBetween(10-100)               // 74
+    Integer randomIntegerBetween(10,100)               // 74
 
     Integer randomDecimalMaxDigits(4,7)                // 489.4819489
 
     Integer randomDecimal(2,3)                         // 33.549
 
-    String bothify('Hello ##??')                       // Hello 39ui
+    String bothify('Hello ##??')                       // Hello 39ui (# is randon digit while ? is random letter)
 
     String toAscii('ÜäĂÇ')                             // UaAC
 
