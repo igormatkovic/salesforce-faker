@@ -138,7 +138,7 @@ Each of the generator properties (like `name`, `address`, and `realText`) are ca
     Decimal latitude()                                 // 46.100571
     Decimal longitude()                                // 19.663298
 
-### `Faker\Provider\Internet`
+### `Faker\Provider\Internet faker.internet`
 
     String email()                                     // 'tkshlerin@collins.com'
     String safeEmail()                                 // 'king.alford@example.org'
@@ -216,10 +216,6 @@ insert contacts;
 System.debug(contacts.size()); // 100
 
 ```
-## License
-
-Salesforce Faker is released under the GNU General Public License v3.0. See the bundled LICENSE file for details.
-
 ## License
 
 Salesforce Faker is released under the GNU General Public License v3.0. See the bundled LICENSE file for details.
