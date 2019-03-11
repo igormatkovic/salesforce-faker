@@ -59,9 +59,9 @@ Each of the generator properties (like `name`, `address`, and `realText`) are ca
 
 ### `FakerBase faker`
 
-    String randomElement(new List<String>{'a','b','c') // c
+    String randomElement(new List<String>{'a','b','c'}) // c
 
-    Integer randomElement(List<Integer>{1,2,3,4,5)     // 4
+    Integer randomElement(List<Integer>{1,2,3,4,5})     // 4
 
     Date randomPastDate()                              // 2017-01-01
 
@@ -81,7 +81,7 @@ Each of the generator properties (like `name`, `address`, and `realText`) are ca
 
     String randomCharacter(10)                         // 10 character string [a-zA-Z0-9]+simbols 8K#$(G)$J@
 
-    Integer randomIntegerMaxDigits(6)                  // 395894
+    Integer randomIntegerMaxDigits(6)                  // 395894 or 39493
 
     Integer randomInteger(3)                           // 543
 
@@ -117,18 +117,18 @@ Each of the generator properties (like `name`, `address`, and `realText`) are ca
     String ssn()                                       // '394-03-9503'
     String gender()                                    // 'female'
     String phone()                                     // '(702) 888-8888'
-    String phone(123)                                  // '(123) 488-4999'
+    String phone(123)                                  // '(123) 488-4999' specify US prefix number
     Date birthday()                                    // 1985-01-23
     String picture(100,100)                            // 'https://picsum.photos/100/100/?random'
 
 ### `FakerAddressProvider faker.address`
 
-    String city()                                      // 'Lake'
-    String state()                                     // 'New Mexico'
-    String stateCode()                                 // 'OH'
+    String city()                                      // 'Las Vegas'
+    String state()                                     // 'Nevada'
+    String stateCode()                                 // 'NV'
     String citySuffix()                                // 'borough'
     String street()                                    // '3094 E. Sunset Rd'
-    String address()                                   // '3765 E. Sunset Rd, Las Vegas NV 89120'
+    String address()                                   // '3766 E. Sunset Rd, Las Vegas NV 89120'
     String streetSuffix()                              // 'Lane'
     String streetPrefix()                              // 'North'
     String buildingNumber()                            // '484'
