@@ -220,7 +220,7 @@ If you need to override a field you can do it by giving the factory a map of val
 
 ```java
 
-Contact c = (Contact) FakerFactory.create(new FakerContactFactory() new Map<String, Object> { 
+Contact c = (Contact) FakerFactory.create(new FakerContactFactory(), new Map<String, Object> { 
     'Name' => 'Dexter Morgan'
 });
 
