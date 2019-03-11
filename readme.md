@@ -215,6 +215,18 @@ insert contacts;
 
 System.debug(contacts.size()); // 100
 
+
+If you need to override a field you can do it by giving the factory a map of values to override:
+
+```java
+
+Contact c = (Contact) FakerFactory.create(new FakerContactFactory(), new Map<String, Object> { 
+    'Name' => 'Dexter Morgan'
+});
+
+System.debug(c.Name);   // Dexter Morgan
+
+```
 ```
 ## License
 
